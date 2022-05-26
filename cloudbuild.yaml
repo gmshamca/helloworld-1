@@ -19,4 +19,3 @@ steps:
     - '--platform'
     - 'managed'
     - '--allow-unauthenticated
-images: ["gcr.io/$PROJECT_ID/hellospringwebapplication"]
