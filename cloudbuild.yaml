@@ -11,7 +11,7 @@ steps:
     args:
     - 'run'
     - 'deploy'
-    - 'cloudrunservice'
+    - 'cloudrunservice-20220527'
     - '--image'
     - 'gcr.io/$PROJECT_ID/hellospringwebapplication'
     - '--region'
