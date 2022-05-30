@@ -19,6 +19,6 @@ steps:
         git pull origin gcp
         cd modules/cloud_run
         terraform init
-        terraform apply -var="project_id=ingrammicroproject" -var="imagename=hellospringwebapplication"  -var="deploy_run_service_name=hellospringwebapplication"       
+        terraform apply -var="project_id=ingrammicroproject" -var="imagename=hellospringwebapplication"  -var="deploy_run_service_name=hellospringwebapplication" -auto-approved     
 # [END tf-apply]  
 images: ["gcr.io/$PROJECT_ID/hellospringwebapplication"]
