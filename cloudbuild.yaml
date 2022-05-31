@@ -13,10 +13,8 @@ steps:
     args: 
      - '-c'
      - | 
-        git clone https://github.com/anup1987/IngramMicroTerraform.git
+        git clone --branch gcp https://github.com/anup1987/IngramMicroTerraform.git
         cd IngramMicroTerraform
-        git checkout -b gcp
-        git pull origin gcp
         git branch
         cd modules/cloud_run
         terraform init
