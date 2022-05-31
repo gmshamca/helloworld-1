@@ -7,6 +7,7 @@ steps:
     args: ["package", "-Dmaven.test.skip=true"]
   - name: gcr.io/cloud-builders/docker
     args: ["build", "-t", "gcr.io/$PROJECT_ID/hellospringwebapplication", "--build-arg=JAR_FILE=target/helloworld-0.0.1-SNAPSHOT.jar", "."]
+images: ["gcr.io/$PROJECT_ID/hellospringwebapplication"]
 # [START tf-apply]
   - name: 'hashicorp/terraform:1.0.0'
     entrypoint: 'sh'
@@ -19,5 +20,4 @@ steps:
         cd modules/cloud_run
         terraform init
         terraform apply  -var="project_id=ingrammicroproject" -var="imagename=hellospringwebapplication"  -var="deploy_run_service_name=hellospringwebapplication" -auto-approve    
-# [END tf-apply]  
-images: ["gcr.io/$PROJECT_ID/hellospringwebapplication"]
+# [END tf-apply]
