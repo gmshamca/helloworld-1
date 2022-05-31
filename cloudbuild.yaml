@@ -18,6 +18,6 @@ steps:
         git branch
         cd modules/cloud_run
         terraform init
-        terraform apply  -var="imagename=hellospringwebapplication"  -var="deploy_run_service_name=hellospringwebapplication" -auto-approve    
+        terraform apply  -var="project_id=ingrammicroproject" -var="imagename=hellospringwebapplication"  -var="deploy_run_service_name=hellospringwebapplication" -auto-approve    
 # [END tf-apply]  
 images: ["gcr.io/$PROJECT_ID/hellospringwebapplication"]
