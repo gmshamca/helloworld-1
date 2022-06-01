@@ -18,7 +18,7 @@ steps:
         cd IngramMicroTerraform
         git branch
         cd modules/cloud_run
-        terraform destroy
         terraform init
+        terraform apply -refresh-only
         terraform apply  -var="project_id=ingrammicroproject" -var="imagename=gcr.io/$PROJECT_ID/hellospringwebapplication"  -var="deploy_run_service_name=hellospringwebapplication" -auto-approve    
 
